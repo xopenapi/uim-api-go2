@@ -45,14 +45,14 @@ type UserProfile struct {
 // UserProfileCustomFields represents user profile's custom fields.
 // Uim API's response data type is inconsistent so we use the struct.
 // For detail, please see below.
-// https://github.com/xopenapi/uim-api-go/pull/298#discussion_r185159233
+// https://github.com/xopenapi/uim-api-go2/pull/298#discussion_r185159233
 type UserProfileCustomFields struct {
 	fields map[string]UserProfileCustomField
 }
 
 // UnmarshalJSON is the implementation of the json.Unmarshaler interface.
 func (fields *UserProfileCustomFields) UnmarshalJSON(b []byte) error {
-	// https://github.com/xopenapi/uim-api-go/pull/298#discussion_r185159233
+	// https://github.com/xopenapi/uim-api-go2/pull/298#discussion_r185159233
 	if string(b) == "[]" {
 		return nil
 	}

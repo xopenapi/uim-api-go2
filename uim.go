@@ -97,7 +97,7 @@ func New(token string, options ...Option) *Client {
 		token:      token,
 		endpoint:   APIURL,
 		httpclient: &http.Client{},
-		log:        log.New(os.Stderr, "xopenapi/uim-api-go", log.LstdFlags|log.Lshortfile),
+		log:        log.New(os.Stderr, "xopenapi/uim-api-go2", log.LstdFlags|log.Lshortfile),
 	}
 
 	for _, opt := range options {

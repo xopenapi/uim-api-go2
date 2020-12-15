@@ -1,6 +1,6 @@
 package uim
 
-import "github.com/xopenapi/uim-api-go/internal/errorsx"
+import "github.com/xopenapi/uim-api-go2/internal/errorsx"
 
 // Errors returned by various methods.
 const (

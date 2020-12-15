@@ -1,4 +1,4 @@
-UIM API in Go [![GoDoc](https://godoc.org/github.com/xopenapi/uim-api-go?status.svg)](https://godoc.org/github.com/xopenapi/uim-api-go) [![Build Status](https://travis-ci.org/xopenapi/uim-api-go.svg)](https://travis-ci.org/xopenapi/uim-api-go)
+UIM API in Go [![GoDoc](https://godoc.org/github.com/xopenapi/uim-api-go2?status.svg)](https://godoc.org/github.com/xopenapi/uim-api-go2) [![Build Status](https://travis-ci.org/xopenapi/uim-api-go2.svg)](https://travis-ci.org/xopenapi/uim-api-go2)
 ===============
 This is the original UIM library for Go created by Norberto Lopez, transferred to a Github organization.
 
@@ -13,13 +13,13 @@ a fully managed way.
 
 ## Changelog
 
-[CHANGELOG.md](https://github.com/xopenapi/uim-api-go/blob/master/CHANGELOG.md) is available. Please visit it for updates.
+[CHANGELOG.md](https://github.com/xopenapi/uim-api-go2/blob/master/CHANGELOG.md) is available. Please visit it for updates.
 
 ## Installing
 
 ### *go get*
 
-    $ go get -u github.com/xopenapi/uim-api-go
+    $ go get -u github.com/xopenapi/uim-api-go2
 
 ## Example
 
@@ -29,7 +29,7 @@ a fully managed way.
 import (
 	"fmt"
 
-	"github.com/xopenapi/uim-api-go"
+	"github.com/xopenapi/uim-api-go2"
 )
 
 func main() {
@@ -54,7 +54,7 @@ func main() {
 import (
     "fmt"
 
-    "github.com/xopenapi/uim-api-go"
+    "github.com/xopenapi/uim-api-go2"
 )
 
 func main() {
@@ -70,12 +70,12 @@ func main() {
 
 ## Minimal RTM usage:
 
-See https://github.com/xopenapi/uim-api-go/blob/master/examples/websocket/websocket.go
+See https://github.com/xopenapi/uim-api-go2/blob/master/examples/websocket/websocket.go
 
 
 ## Minimal EventsAPI usage:
 
-See https://github.com/xopenapi/uim-api-go/blob/master/examples/eventsapi/events.go
+See https://github.com/xopenapi/uim-api-go2/blob/master/examples/eventsapi/events.go
 
 
 ## Contributing

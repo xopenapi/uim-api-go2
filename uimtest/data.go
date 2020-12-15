@@ -3,7 +3,7 @@ package uimtest
 import (
 	"fmt"
 
-	uim "github.com/xopenapi/uim-api-go"
+	uim "github.com/xopenapi/uim-api-go2"
 )
 
 const defaultBotName = "TestUIMBot"

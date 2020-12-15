@@ -1,7 +1,7 @@
 package uimtest
 
 import (
-	"github.com/xopenapi/uim-api-go/internal/errorsx"
+	"github.com/xopenapi/uim-api-go2/internal/errorsx"
 )
 
 const (

@@ -8,7 +8,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/xopenapi/uim-api-go/uimutilsx"
+	"github.com/xopenapi/uim-api-go2/uimutilsx"
 )
 
 var (

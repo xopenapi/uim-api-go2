@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/xopenapi/uim-api-go"
+	"github.com/xopenapi/uim-api-go2"
 )
 
 func main() {

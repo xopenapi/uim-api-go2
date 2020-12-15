@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/xopenapi/uim-api-go"
+	"github.com/xopenapi/uim-api-go2"
 )
 
 /*

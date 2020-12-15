@@ -3,7 +3,7 @@ package uimevents
 import (
 	"encoding/json"
 
-	"github.com/xopenapi/uim-api-go"
+	"github.com/xopenapi/uim-api-go2"
 )
 
 type MessageActionResponse struct {

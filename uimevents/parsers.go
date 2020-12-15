@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/xopenapi/uim-api-go"
+	"github.com/xopenapi/uim-api-go2"
 )
 
 // eventsMap checks both uim.EventsMapping and

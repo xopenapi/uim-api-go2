@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/xopenapi/uim-api-go"
+	"github.com/xopenapi/uim-api-go2"
 )
 
 // A minimal example showing how to open a modal

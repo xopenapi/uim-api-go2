@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/xopenapi/uim-api-go/internal/errorsx"
-	"github.com/xopenapi/uim-api-go/internal/timex"
+	"github.com/xopenapi/uim-api-go2/internal/errorsx"
+	"github.com/xopenapi/uim-api-go2/internal/timex"
 )
 
 // ManageConnection can be called on a UIM RTM instance returned by the

@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xopenapi/uim-api-go"
 	"github.com/stretchr/testify/assert"
+	"github.com/xopenapi/uim-api-go2"
 )
 
 func TestRTMInfo(t *testing.T) {

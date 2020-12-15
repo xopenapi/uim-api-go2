@@ -8,9 +8,9 @@ import (
 	"time"
 
 	websocket "github.com/gorilla/websocket"
-	"github.com/xopenapi/uim-api-go"
-	"github.com/xopenapi/uim-api-go/uimtest"
 	"github.com/stretchr/testify/assert"
+	"github.com/xopenapi/uim-api-go2"
+	"github.com/xopenapi/uim-api-go2/uimtest"
 )
 
 const (

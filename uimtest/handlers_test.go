@@ -3,8 +3,8 @@ package uimtest
 import (
 	"testing"
 
-	uim "github.com/xopenapi/uim-api-go"
 	"github.com/stretchr/testify/assert"
+	uim "github.com/xopenapi/uim-api-go2"
 )
 
 func TestAuthTestHandler(t *testing.T) {

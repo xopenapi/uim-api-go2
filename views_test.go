@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/xopenapi/uim-api-go/internal/errorsx"
 	"github.com/stretchr/testify/assert"
+	"github.com/xopenapi/uim-api-go2/internal/errorsx"
 )
 
 var dummyUimErr = errorsx.String("dummy_error_from_uim")

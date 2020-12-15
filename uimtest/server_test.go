@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xopenapi/uim-api-go"
 	"github.com/stretchr/testify/assert"
+	"github.com/xopenapi/uim-api-go2"
 )
 
 func TestDefaultNewServer(t *testing.T) {

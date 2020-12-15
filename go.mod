@@ -1,4 +1,4 @@
-module github.com/xopenapi/uim-api-go
+module github.com/xopenapi/uim-api-go2
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect

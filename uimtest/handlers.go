@@ -11,7 +11,7 @@ import (
 	"time"
 
 	websocket "github.com/gorilla/websocket"
-	uim "github.com/xopenapi/uim-api-go"
+	uim "github.com/xopenapi/uim-api-go2"
 )
 
 func contextHandler(server *Server, next http.HandlerFunc) http.Handler {
