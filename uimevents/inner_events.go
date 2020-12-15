@@ -29,7 +29,7 @@ type AppMentionEvent struct {
 	SourceTeam string `json:"source_team,omitempty"`
 
 	// BotID is filled out when a bot triggers the app_mention event
-	BotID    string `json:"bot_id,omitempty"`
+	BotID string `json:"bot_id,omitempty"`
 }
 
 // AppHomeOpenedEvent Your UIM app home was opened.
@@ -39,7 +39,7 @@ type AppHomeOpenedEvent struct {
 	Channel        string      `json:"channel"`
 	EventTimeStamp json.Number `json:"event_ts"`
 	Tab            string      `json:"tab"`
-	View           uim.View  `json:"view"`
+	View           uim.View    `json:"view"`
 }
 
 // AppUninstalledEvent Your UIM app was uninstalled.

@@ -2,6 +2,7 @@ package uim
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -145,6 +146,14 @@ func (api *Client) Debug() bool {
 // post to a uim web method.
 func (api *Client) postMethod(ctx context.Context, path string, values url.Values, intf interface{}) error {
 	return postForm(ctx, api.httpclient, api.endpoint+path, values, intf, api)
+}
+
+func (api *Client) postJSONMethod(ctx context.Context, path string, reqIntf interface{}, intf interface{}) error {
+	json, err := json.Marshal(reqIntf)
+	if err != nil {
+		return err
+	}
+	return postJSON(ctx, api.httpclient, api.endpoint+path, api.token, json, intf, api)
 }
 
 // get a uim web method.

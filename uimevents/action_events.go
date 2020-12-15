@@ -19,18 +19,18 @@ type MessageActionEntity struct {
 }
 
 type MessageAction struct {
-	Type             string                   `json:"type"`
+	Type             string                 `json:"type"`
 	Actions          []uim.AttachmentAction `json:"actions"`
-	CallbackID       string                   `json:"callback_id"`
-	Team             MessageActionEntity      `json:"team"`
-	Channel          MessageActionEntity      `json:"channel"`
-	User             MessageActionEntity      `json:"user"`
-	ActionTimestamp  json.Number              `json:"action_ts"`
-	MessageTimestamp json.Number              `json:"message_ts"`
-	AttachmentID     json.Number              `json:"attachment_id"`
-	Token            string                   `json:"token"`
+	CallbackID       string                 `json:"callback_id"`
+	Team             MessageActionEntity    `json:"team"`
+	Channel          MessageActionEntity    `json:"channel"`
+	User             MessageActionEntity    `json:"user"`
+	ActionTimestamp  json.Number            `json:"action_ts"`
+	MessageTimestamp json.Number            `json:"message_ts"`
+	AttachmentID     json.Number            `json:"attachment_id"`
+	Token            string                 `json:"token"`
 	Message          uim.Message            `json:"message"`
 	OriginalMessage  uim.Message            `json:"original_message"`
-	ResponseURL      string                   `json:"response_url"`
-	TriggerID        string                   `json:"trigger_id"`
+	ResponseURL      string                 `json:"response_url"`
+	TriggerID        string                 `json:"trigger_id"`
 }
