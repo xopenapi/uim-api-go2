@@ -1,6 +1,6 @@
 package uim
 
-type AppChatPostMessageParameters struct {
+type IMProviderChatPostMessageParameters struct {
 	Id        string      `json:"id"`
 	UserId    string      `json:"userId"`
 	ToUserId  string      `json:"toUserId"`
@@ -14,7 +14,7 @@ type AppChatPostMessageParameters struct {
 	UpdateAt  int64       `json:"updateAt"`
 }
 
-type AppChatPostMessageResponse struct {
+type IMProviderChatPostMessageResponse struct {
 	UimResponse
 	Message IMMessage `json:"message"`
 }

@@ -1,12 +1,12 @@
 package uim
 
-type AppGroupPostMessageParameters struct {
+type IMProviderGroupPostMessageParameters struct {
 	UserId    string      `json:"userId"`
 	ToGroupId string      `json:"toGroupId"`
 	Content   interface{} `json:"content"`
 }
 
-type AppGroupPostMessageResponse struct {
+type IMProviderGroupPostMessageResponse struct {
 	UimResponse
 	Message IMMessage `json:"message"`
 }
