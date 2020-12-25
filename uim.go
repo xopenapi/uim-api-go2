@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"strings"
 )
 
 const (
@@ -88,7 +89,11 @@ func OptionLog(l logger) func(*Client) {
 
 // OptionAPIURL set the url for the client. only useful for testing.
 func OptionAPIURL(u string) func(*Client) {
-	return func(c *Client) { c.endpoint = u }
+	if strings.HasSuffix(u, "/") {
+		return func(c *Client) { c.endpoint = u }
+	} else {
+		return func(c *Client) { c.endpoint = u + "/" }
+	}
 }
 
 // New builds a uim client from the provided token and options.
@@ -158,5 +163,5 @@ func (api *Client) postJSONMethod(ctx context.Context, path string, reqIntf inte
 
 // get a uim web method.
 func (api *Client) getMethod(ctx context.Context, path string, values url.Values, intf interface{}) error {
-	return getResource(ctx, api.httpclient, api.endpoint+path, values, intf, api)
+	return getResource(ctx, api.httpclient, api.endpoint+path, api.token, values, intf, api)
 }
