@@ -232,7 +232,7 @@ func doPost(ctx context.Context, client httpClient, req *http.Request, parser re
 }
 
 // post JSON.
-func postJSON(ctx context.Context, client httpClient, endpoint, token string, json []byte, intf interface{}, d debug) error {
+func postJSON(ctx context.Context, client httpClient, endpoint, tenantId, token string, json []byte, intf interface{}, d debug) error {
 	reqBody := bytes.NewBuffer(json)
 	req, err := http.NewRequest("POST", endpoint, reqBody)
 	if err != nil {
@@ -240,7 +240,7 @@ func postJSON(ctx context.Context, client httpClient, endpoint, token string, js
 	}
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Token", token)
-
+	req.Header.Set("TenantId", tenantId)
 	return doPost(ctx, client, req, newJSONParser(intf), d)
 }
 

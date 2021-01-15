@@ -56,6 +56,7 @@ type authTestResponseFull struct {
 type ParamOption func(*url.Values)
 
 type Client struct {
+	tenantId   string
 	token      string
 	endpoint   string
 	debug      bool
@@ -93,6 +94,12 @@ func OptionAPIURL(u string) func(*Client) {
 		return func(c *Client) { c.endpoint = u }
 	} else {
 		return func(c *Client) { c.endpoint = u + "/" }
+	}
+}
+
+func OptionTenantId(tenantId string) func(*Client) {
+	return func(c *Client) {
+		c.tenantId = tenantId
 	}
 }
 
@@ -158,7 +165,7 @@ func (api *Client) postJSONMethod(ctx context.Context, path string, reqIntf inte
 	if err != nil {
 		return err
 	}
-	return postJSON(ctx, api.httpclient, api.endpoint+path, api.token, json, intf, api)
+	return postJSON(ctx, api.httpclient, api.endpoint+path, api.tenantId, api.token, json, intf, api)
 }
 
 // get a uim web method.

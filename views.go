@@ -169,7 +169,7 @@ func (api *Client) OpenViewContext(
 	}
 	endpoint := api.endpoint + "views.open"
 	resp := &ViewResponse{}
-	err = postJSON(ctx, api.httpclient, endpoint, api.token, encoded, resp, api)
+	err = postJSON(ctx, api.httpclient, endpoint, api.token, api.tenantId, encoded, resp, api)
 	if err != nil {
 		return nil, err
 	}
@@ -202,7 +202,7 @@ func (api *Client) PublishViewContext(
 	}
 	endpoint := api.endpoint + "views.publish"
 	resp := &ViewResponse{}
-	err = postJSON(ctx, api.httpclient, endpoint, api.token, encoded, resp, api)
+	err = postJSON(ctx, api.httpclient, endpoint, api.token, api.tenantId, encoded, resp, api)
 	if err != nil {
 		return nil, err
 	}
@@ -233,7 +233,7 @@ func (api *Client) PushViewContext(
 	}
 	endpoint := api.endpoint + "views.push"
 	resp := &ViewResponse{}
-	err = postJSON(ctx, api.httpclient, endpoint, api.token, encoded, resp, api)
+	err = postJSON(ctx, api.httpclient, endpoint, api.token, api.tenantId, encoded, resp, api)
 	if err != nil {
 		return nil, err
 	}
@@ -267,7 +267,7 @@ func (api *Client) UpdateViewContext(
 	}
 	endpoint := api.endpoint + "views.update"
 	resp := &ViewResponse{}
-	err = postJSON(ctx, api.httpclient, endpoint, api.token, encoded, resp, api)
+	err = postJSON(ctx, api.httpclient, endpoint, api.token, api.tenantId, encoded, resp, api)
 	if err != nil {
 		return nil, err
 	}
