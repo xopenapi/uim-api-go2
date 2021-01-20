@@ -43,37 +43,6 @@ type IMAccountUpateParameters struct {
 	IsDeleted    bool        `json:"isDeleted"`
 }
 
-type IMAccountAddParameters struct {
-	AccountId    string                 `json:"accountId"`
-	CustomId     string                 `json:"customId"`
-	Nickname     string                 `json:"nickname"`
-	Avatar       string                 `json:"avatar"`
-	Gender       int32                  `json:"gender"`
-	Mobile       string                 `json:"mobile"`
-	Country      string                 `json:"country"`
-	State        string                 `json:"state"`
-	City         string                 `json:"city"`
-	Alias        string                 `json:"alias"`
-	Qrcode       string                 `json:"qrcode"`
-	Signature    string                 `json:"signature"`
-	TenantId     string                 `json:"tenantId"`
-	TenantUserId string                 `json:"tenantUserId"`
-	ExtendProps  map[string]interface{} `json:"extendProps"`
-}
-
-func (api *Client) AccountAdd(req *IMAccountAddParameters) error {
-	return api.AccountAddContext(context.Background(), req)
-}
-
-func (api *Client) AccountAddContext(ctx context.Context, req *IMAccountAddParameters) error {
-	response := UimResponse{}
-	err := api.postJSONMethod(ctx, "account.add", req, &response)
-	if err != nil {
-		return err
-	}
-	return response.Err()
-}
-
 func (api *Client) AccountUpdate(req *IMAccountUpateParameters) error {
 	return api.AccountUpdateContext(context.Background(), req)
 }
