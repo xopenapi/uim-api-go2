@@ -19,6 +19,20 @@ const (
 	LinkTimelineMedia  TimelineMediaType = 7
 )
 
+type IMTimelineLikeAddParameters struct {
+	AccountId        string            `json:"accountId"`
+	UserId           string            `json:"userId"`
+	TimelineId       string            `json:"timelineId"`
+	TimelineLikeUser *TimelineLikeUser `json:"timelineLikeUser"`
+}
+
+type IMTimelineCommentAddParameters struct {
+	AccountId       string           `json:"accountId"`
+	UserId          string           `json:"userId"`
+	TimelineId      string           `json:"timelineId"`
+	TimelineComment *TimelineComment `json:"timelineComment"`
+}
+
 type IMTimelineAddParameters struct {
 	AccountId  string              `json:"accountId"`
 	UserId     string              `json:"userId"`
@@ -60,10 +74,6 @@ type TimelineMedia struct {
 	Content interface{}       `json:"content"`
 }
 
-type IMTimelineAddResponse struct {
-	UimResponse
-}
-
 type TimelineImage struct {
 	Format string `json:"format"`
 	Width  int32  `json:"width"`
@@ -103,7 +113,7 @@ func (api *Client) TimelineAdd(req *IMTimelineAddParameters) error {
 }
 
 func (api *Client) TimelineAddContext(ctx context.Context, req *IMTimelineAddParameters) error {
-	response := IMTimelineAddResponse{}
+	response := UimResponse{}
 	err := api.postJSONMethod(ctx, "timeline.add", req, &response)
 	if err != nil {
 		return err
@@ -124,18 +134,19 @@ func (api *Client) TimelineAddContext(ctx context.Context, req *IMTimelineAddPar
 //	return response.Err()
 //}
 //
-//func (api *Client) TimelineLikeAdd(req *IMGroupPostMessageParameters) error {
-//	return api.GroupPostMessageContext(context.Background(), req)
-//}
-//
-//func (api *Client) TimelineLikeAddContext(ctx context.Context, req *IMGroupPostMessageParameters) error {
-//	response := IMChatPostMessageResponse{}
-//	err := api.postJSONMethod(ctx, "group.postMessage", req, &response)
-//	if err != nil {
-//		return err
-//	}
-//	return response.Err()
-//}
+func (api *Client) TimelineLikeAdd(req *IMTimelineLikeAddParameters) error {
+	return api.TimelineLikeAddContext(context.Background(), req)
+}
+
+func (api *Client) TimelineLikeAddContext(ctx context.Context, req *IMTimelineLikeAddParameters) error {
+	response := UimResponse{}
+	err := api.postJSONMethod(ctx, "timeline.like.add", req, &response)
+	if err != nil {
+		return err
+	}
+	return response.Err()
+}
+
 //
 //func (api *Client) TimelineLikeRemove(req *IMGroupPostMessageParameters) error {
 //	return api.GroupPostMessageContext(context.Background(), req)
@@ -150,18 +161,19 @@ func (api *Client) TimelineAddContext(ctx context.Context, req *IMTimelineAddPar
 //	return response.Err()
 //}
 //
-//func (api *Client) TimelineMessageAdd(req *IMGroupPostMessageParameters) error {
-//	return api.GroupPostMessageContext(context.Background(), req)
-//}
-//
-//func (api *Client) TimelineMessageAddContext(ctx context.Context, req *IMGroupPostMessageParameters) error {
-//	response := IMChatPostMessageResponse{}
-//	err := api.postJSONMethod(ctx, "group.postMessage", req, &response)
-//	if err != nil {
-//		return err
-//	}
-//	return response.Err()
-//}
+func (api *Client) TimelineCommentAdd(req *IMTimelineCommentAddParameters) error {
+	return api.TimelineCommentAddContext(context.Background(), req)
+}
+
+func (api *Client) TimelineCommentAddContext(ctx context.Context, req *IMTimelineCommentAddParameters) error {
+	response := UimResponse{}
+	err := api.postJSONMethod(ctx, "timeline.comment.add", req, &response)
+	if err != nil {
+		return err
+	}
+	return response.Err()
+}
+
 //
 //func (api *Client) TimelineMessageRemove(req *IMGroupPostMessageParameters) error {
 //	return api.GroupPostMessageContext(context.Background(), req)
