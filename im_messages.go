@@ -77,3 +77,10 @@ type IMLink struct {
 	PicURL      string `json:"picurl"`
 	URL         string `json:"url"`
 }
+
+type IMMiniApp struct {
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	PicURL      string `json:"picUrl"`
+	Content     string `json:"content"`
+}
