@@ -79,8 +79,14 @@ type IMLink struct {
 }
 
 type IMMiniApp struct {
-	Title       string `json:"title"`
-	Description string `json:"description"`
-	PicURL      string `json:"picUrl"`
-	Content     string `json:"content"`
+	AppId      string `json:"appId"`
+	Title      string `json:"title"`
+	Desc       string `json:"desc"`
+	PagePath   string `json:"pagepath"`
+	ThumbURL   string `json:"thumburl"`
+	IconURL    string `json:"iconUrl"`
+	Username   string `json:"username"`
+	Version    string `json:"version"`
+	Type       string `json:"type"`
+	XMLContent string `json:"xmlContent"`
 }
