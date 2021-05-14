@@ -12,6 +12,8 @@ type IMAccount struct {
 	Avatar      string      `json:"avatar"`
 	Gender      int32       `json:"gender"`
 	Mobile      string      `json:"mobile"`
+	Status      int32       `json:"status"`
+	Online      int32       `json:"online"`
 	Country     string      `json:"country"`
 	State       string      `json:"state"`
 	City        string      `json:"city"`
@@ -30,6 +32,8 @@ type IMAccountUpateParameters struct {
 	Nickname     string      `json:"nickname"`
 	Avatar       string      `json:"avatar"`
 	Gender       int32       `json:"gender"`
+	Status       int32       `json:"status"`
+	Online       int32       `json:"online"`
 	Mobile       string      `json:"mobile"`
 	Country      string      `json:"country"`
 	State        string      `json:"state"`
